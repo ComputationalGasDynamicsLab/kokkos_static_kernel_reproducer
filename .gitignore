@@ -1,0 +1,6 @@
+# build output of build.sh / run_all.sh
+build_*/
+# core dumps from the -O2/-O3 builds, which abort by design
+core
+core.*
+core_*

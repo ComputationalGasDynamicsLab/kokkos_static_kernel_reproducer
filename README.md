@@ -54,7 +54,10 @@ O3         exit=134   what():  cudaFuncGetAttributes(&attr, func) error( cudaErr
 O2_unity   exit=0     PASS: v(0) = 1, expected 1
 ```
 
-`O3` is `-O3 -DNDEBUG`; `O2_unity` is `-O2` built as a unity build. To build one configuration:
+`O3` is `-O3 -DNDEBUG`; `O2_unity` is `-O2` built as a unity build.
+
+`build.sh` builds without running: `./build.sh` with no arguments builds all five configurations,
+and `./build.sh <tag> "<flags>" [cmake options]` builds one, for example
 `./build.sh O2 "-O2" && ./build_O2/repro`.
 
 **Tested toolchain:** GCC 11.5.0 as the host compiler through `nvcc_wrapper`, CUDA 12.5 without
